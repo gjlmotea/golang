@@ -11,17 +11,20 @@ var balance = 0
 
 func main() {
 	router := gin.Default()
-
+	router.LoadHTMLGlob("./*.html")
 	router.GET("/deposit/:input", deposit)
 	router.GET("/withdraw/:input", withdraw)
 	router.Any("/balance/", getBalance)
-	router.Any("/test/", test)
+	router.GET("/test/", test)
 
 	router.Run(":80")
 }
 
 func test(context *gin.Context) {
-	context.String(http.StatusOK, "test")
+	//context.String(http.StatusOK, "test")
+	context.HTML(http.StatusOK, "index.html", gin.H{
+		"title": "Title",
+	})
 }
 
 func getBalance(context *gin.Context) {

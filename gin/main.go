@@ -33,7 +33,7 @@ func getBalance(context *gin.Context) {
 	//// err context.Data(http.StatusOK, "text/html; charset=utf-8", msg)
 	context.JSON(http.StatusOK, gin.H{
 		"amount":  balance,
-		"status":  "balance",
+		"status":  "ok",
 		"message": msg,
 	})
 }
@@ -50,7 +50,7 @@ func deposit(context *gin.Context) {
 			msg = "操作失敗，存款金額需大於0元！"
 		} else {
 			balance += amount
-			status = "deposit"
+			status = "ok"
 			msg = "已成功存款" + strconv.Itoa(amount) + "元"
 		}
 	} else {
@@ -59,7 +59,7 @@ func deposit(context *gin.Context) {
 		msg = "操作失敗，輸入有誤！"
 	}
 	context.JSON(http.StatusOK, gin.H{
-		"amount":  balance,
+		"amount":  amount,
 		"status":  status,
 		"message": msg,
 	})
@@ -82,7 +82,7 @@ func withdraw(context *gin.Context) {
 				msg = "操作失敗，餘額不足！"
 			} else {
 				balance -= amount
-				status = "withdraw"
+				status = "ok"
 				msg = "成功提款" + strconv.Itoa(amount) + "元"
 			}
 		}
@@ -92,7 +92,7 @@ func withdraw(context *gin.Context) {
 		msg = "操作失敗，輸入有誤！"
 	}
 	context.JSON(http.StatusOK, gin.H{
-		"amount":  balance,
+		"amount":  amount,
 		"status":  status,
 		"message": msg,
 	})

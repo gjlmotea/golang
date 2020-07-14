@@ -1,3 +1,0 @@
-package: github.com/gjlmotea/golang
-import:
-- package: github.com/gin-gonic/gin

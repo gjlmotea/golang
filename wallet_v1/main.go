@@ -3,59 +3,46 @@ package main
 import (
 	"net/http"
 	"strconv"
+
 	"github.com/gin-gonic/gin"
 )
 
-var balance = 0
+var balance int = 0
 
 func main() {
 	router := gin.Default()
-	router.LoadHTMLGlob("./*.html")
-	router.GET("/deposit/:input", deposit)
-	router.GET("/withdraw/:input", withdraw)
-	router.Any("/balance/", getBalance)
-	router.GET("/test/", test)
+	router.POST("/deposit/:input", deposit)
+	router.POST("/withdraw/:input", withdraw)
+	router.GET("/balance/", getBalance)
 
 	router.Run(":80")
 }
 
-func test(context *gin.Context) {
-	//context.String(http.StatusOK, "test")
-	context.HTML(http.StatusOK, "index.html", gin.H{
-		"title": "Title",
-	})
-}
-
 func getBalance(context *gin.Context) {
-	var msg = "您的錢包裡有:" + strconv.Itoa(balance) + "元"
-	//context.String(http.StatusOK, msg, "text/html; charset=utf-8")
-	//// err context.Data(http.StatusOK, "text/html; charset=utf-8", msg)
 	context.JSON(http.StatusOK, gin.H{
-		"amount":  balance,
-		"status":  "ok",
-		"message": msg,
+		"amount": balance,
+		"status": "ok",
 	})
 }
 
 func deposit(context *gin.Context) {
+	var amount int = 0
+	var status string = "failed"
+	var msg string = ""
+
 	input := context.Param("input")
 	amount, err := strconv.Atoi(input)
-	status := "status init"
-	msg := "msg init"
-	if err == nil {
+	if err != nil {
+		amount = 0
+		msg = "操作失敗，輸入有誤！"
+	} else {
 		if amount <= 0 {
 			amount = 0
-			status = "failed"
 			msg = "操作失敗，存款金額需大於0元！"
 		} else {
 			balance += amount
 			status = "ok"
-			msg = "已成功存款" + strconv.Itoa(amount) + "元"
 		}
-	} else {
-		amount = 0
-		status = "failed"
-		msg = "操作失敗，輸入有誤！"
 	}
 	context.JSON(http.StatusOK, gin.H{
 		"amount":  amount,
@@ -65,30 +52,28 @@ func deposit(context *gin.Context) {
 }
 
 func withdraw(context *gin.Context) {
+	var amount int = 0
+	var status string = "failed"
+	var msg string = ""
+
 	input := context.Param("input")
 	amount, err := strconv.Atoi(input)
-	status := "status init"
-	msg := "msg init"
-	if err == nil {
+	if err != nil {
+		amount = 0
+		msg = "操作失敗，輸入有誤！"
+	} else {
 		if amount <= 0 {
 			amount = 0
-			status = "failed"
 			msg = "操作失敗，提款金額需大於0元！"
 		} else {
 			if balance-amount < 0 {
 				amount = 0
-				status = "failed"
 				msg = "操作失敗，餘額不足！"
 			} else {
 				balance -= amount
 				status = "ok"
-				msg = "成功提款" + strconv.Itoa(amount) + "元"
 			}
 		}
-	} else {
-		amount = 0
-		status = "failed"
-		msg = "操作失敗，輸入有誤！"
 	}
 	context.JSON(http.StatusOK, gin.H{
 		"amount":  amount,

@@ -1,5 +1,5 @@
-hash: ae0d5e4e353a384c25bf46b516ff5c79235979b1882e61e88cfb9ced88054dfb
-updated: 2020-07-14T16:44:23.602923+08:00
+hash: 208ace7d60ae7d5a46dbd3d3411a469f4deacc23c9aa213945b9fa160846c89d
+updated: 2020-07-14T11:23:56.105664+08:00
 imports:
 - name: github.com/gin-contrib/sse
   version: 43f0f29dbd2b3f0feeebff91fd9cda22db296938

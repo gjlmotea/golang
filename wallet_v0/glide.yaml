@@ -1,4 +1,4 @@
-package: github.com/gjlmotea/golang/wallet_v1
+package: github.com/gjlmotea/golang/wallet_v0
 import:
 - package: github.com/gin-gonic/gin
   version: ~1.3.0

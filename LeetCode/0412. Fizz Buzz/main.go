@@ -22,6 +22,7 @@ func fizzBuzz(n int) []string {
 		default:
 			str = append(str, strconv.Itoa(i))
 		}
+		fmt.Print(1 != 2)
 
 	}
 	return str

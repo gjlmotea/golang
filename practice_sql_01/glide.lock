@@ -1,0 +1,67 @@
+hash: 8bb9e90eddf4ec11cab5835322555fa6b53da0794ebf51ae2b0bbc9323b1f242
+updated: 2020-07-17T15:30:31.639787+08:00
+imports:
+- name: github.com/gin-contrib/sse
+  version: 43f0f29dbd2b3f0feeebff91fd9cda22db296938
+- name: github.com/gin-gonic/gin
+  version: b869fe1415e4b9eb52f247441830d502aece2d4d
+  subpackages:
+  - binding
+  - json
+  - render
+- name: github.com/go-sql-driver/mysql
+  version: 12508c83901b1a418e3dea51850f956f32506f4e
+- name: github.com/golang/protobuf
+  version: d04d7b157bb510b1e0c10132224b616ac0e26b17
+  subpackages:
+  - proto
+- name: github.com/json-iterator/go
+  version: a1ca0830781e007c66b225121d2cdb3a649421f6
+- name: github.com/mattn/go-isatty
+  version: cb30d6282491c185f77d9bec5d25de1bb61a06bc
+- name: github.com/modern-go/concurrent
+  version: bacd9c7ef1dd9b15be4a9909b8ac7a4e313eec94
+- name: github.com/modern-go/reflect2
+  version: 7e6ae53ffa0b80243b941dafd23e2c78e2f24135
+- name: github.com/ugorji/go
+  version: 464a99f4227ad47a2b60408a9f56d5f4cdb9a1c5
+  subpackages:
+  - codec
+- name: golang.org/x/sys
+  version: ddb9806d33aed8dbaac1cd6f1cba58952e87f933
+  subpackages:
+  - internal/unsafeheader
+  - unix
+- name: google.golang.org/protobuf
+  version: aabe1524261b32d3d816b53e803bfcde47a46d18
+  subpackages:
+  - encoding/prototext
+  - encoding/protowire
+  - internal/descfmt
+  - internal/descopts
+  - internal/detrand
+  - internal/encoding/defval
+  - internal/encoding/messageset
+  - internal/encoding/tag
+  - internal/encoding/text
+  - internal/errors
+  - internal/filedesc
+  - internal/filetype
+  - internal/flags
+  - internal/genid
+  - internal/impl
+  - internal/order
+  - internal/pragma
+  - internal/set
+  - internal/strs
+  - internal/version
+  - proto
+  - reflect/protoreflect
+  - reflect/protoregistry
+  - runtime/protoiface
+  - runtime/protoimpl
+- name: gopkg.in/go-playground/validator.v8
+  version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
+- name: gopkg.in/yaml.v2
+  version: 0b1645d91e851e735d3e23330303ce81f70adbe3
+testImports: []

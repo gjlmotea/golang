@@ -1,4 +1,4 @@
-package: github.com/gjlmotea/golang/wallet_v2
+package: github.com/gjlmotea/golang/practice_sql_01
 import:
 - package: github.com/gin-gonic/gin
   version: ~1.3.0

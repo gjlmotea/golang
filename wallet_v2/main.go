@@ -31,7 +31,10 @@ func dbConnect() {
 		log.Fatal(err)
 	}
 	//defer dbconn.Close()
-	dbconn.Ping()
+	err = dbconn.Ping()
+	if err != nil{
+		log.Fatalln(err)
+	}
 	db = dbconn
 }
 

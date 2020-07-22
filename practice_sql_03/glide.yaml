@@ -1,0 +1,5 @@
+package: github.com/gjlmotea/golang/practice_sql_03
+import:
+- package: github.com/gin-gonic/gin
+  version: ~1.3.0
+- package: github.com/go-sql-driver/mysql

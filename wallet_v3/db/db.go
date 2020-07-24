@@ -32,6 +32,9 @@ func QueryBalance(id string) (balance int, valid bool){
 	var acct Account
 	acct.Id = id
 	err := db.QueryRow("SELECT balance FROM account WHERE id = ?", acct.Id).Scan(&acct.Balance)
+	/*if err == sql.ErrNoRows{
+		//查無使用者
+	}*/
 	if err != nil{
 		return
 	}

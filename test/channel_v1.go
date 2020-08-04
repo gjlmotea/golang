@@ -14,7 +14,7 @@ func main()  {
 	c <- 100
 	c <- 10
 	c <- 1
-	time.Sleep(1000)
+	time.Sleep(1000000)
 	return
 }
 

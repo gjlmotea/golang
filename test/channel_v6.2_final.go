@@ -35,6 +35,9 @@ func main() {
 		case f := <- finC:
 			log.Println("f", f)
 			break LOOP
+		case <- time.After(2000 * time.Millisecond):
+			log.Println("timeout")
+
 		}
 	}
 }

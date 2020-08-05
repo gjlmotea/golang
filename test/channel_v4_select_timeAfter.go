@@ -20,7 +20,7 @@ func main() {
 
 func getSomething(c chan int)  {
 	rand.Seed(time.Now().UnixNano())
-	randNum := rand.Int() % 1000
+	randNum := rand.Int() % 2000
 	fmt.Println("Get something takes", randNum, "ms")
 	time.Sleep(time.Microsecond *time.Duration(randNum))
 	c <- 1000

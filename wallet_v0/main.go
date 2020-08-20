@@ -15,7 +15,7 @@ func main() {
 	router.GET("/deposit/:input", deposit)
 	router.GET("/withdraw/:input", withdraw)
 	router.GET("/balance/", getBalance)
-	router.GET("/test/", test)
+	router.GET("/tutor/", test)
 
 	router.Run(":80")
 }

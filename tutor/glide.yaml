@@ -1,4 +1,4 @@
-package: github.com/gjlmotea/golang/test
+package: github.com/gjlmotea/golang/tutor
 import:
 - package: github.com/gocolly/colly
   version: ~1.2.0

@@ -6,7 +6,7 @@
 
 用br換<br>行<br />了  
 
--[ ] uncheckedBox
+-[ ] uncheckedBox  
 -[x] checkedBox  
 
 勾了好像沒反應？  

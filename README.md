@@ -28,7 +28,6 @@ multi lines Block
 4
 Some Code Here...
 ```
-
-![image](https://raw.githubusercontent.com/gin-gonic/logo/master/color.png "這是GIN"){:height="100px" width="100px"}
+![image](https://avatars1.githubusercontent.com/u/40420568?s=460&u=b934efe1b760a3789778859ee1bb5b80dbbfe441&v=4 "GJLMoTea")
 
 <img align="right" width="159px" src="https://raw.githubusercontent.com/gin-gonic/logo/master/color.png">

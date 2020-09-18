@@ -3,17 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	result := cal("+", 5, 7)
-	fmt.Println(result)
+	nums := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	s := sum(nums...)
+	fmt.Println(s)
 }
 
-func cal(op string, nums ...int) int {
-	if op == "+" {
-		sum := 0
-		for _, num := range nums {
-			sum += num
-		}
-		return sum
-	}
+func sum(nums ...) int {
+
 	return 0
 }

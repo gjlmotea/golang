@@ -1,8 +1,8 @@
 hash: cf78e9f21d6334a714f3699b624d0400bc3c6b571fc9d832c9d37f5497290149
-updated: 2020-07-22T17:42:21.426475+08:00
+updated: 2020-09-09T14:47:42.692481+08:00
 imports:
 - name: github.com/gin-contrib/sse
-  version: 43f0f29dbd2b3f0feeebff91fd9cda22db296938
+  version: 06e6e3d866e43b8fad2615b422d3bf05fd63d9be
 - name: github.com/gin-gonic/gin
   version: b869fe1415e4b9eb52f247441830d502aece2d4d
   subpackages:
@@ -10,13 +10,13 @@ imports:
   - json
   - render
 - name: github.com/go-sql-driver/mysql
-  version: 73dc904a9ece5c074295a77abb7a135797a351bf
+  version: 46351a8892976898935f653f5333782579a96fa5
 - name: github.com/golang/protobuf
   version: d04d7b157bb510b1e0c10132224b616ac0e26b17
   subpackages:
   - proto
 - name: github.com/json-iterator/go
-  version: a1ca0830781e007c66b225121d2cdb3a649421f6
+  version: 6821bec9fa5c17f697f0f2f77ac5055e41a203ac
 - name: github.com/mattn/go-isatty
   version: cb30d6282491c185f77d9bec5d25de1bb61a06bc
 - name: github.com/modern-go/concurrent
@@ -28,12 +28,12 @@ imports:
   subpackages:
   - codec
 - name: golang.org/x/sys
-  version: ddb9806d33aed8dbaac1cd6f1cba58952e87f933
+  version: 196b9ba8737a10c9253b04174f25881e562da5b8
   subpackages:
   - internal/unsafeheader
   - unix
 - name: google.golang.org/protobuf
-  version: aabe1524261b32d3d816b53e803bfcde47a46d18
+  version: 16365ed3d8cfe6a4797229f0b1b7588d0259755b
   subpackages:
   - encoding/prototext
   - encoding/protowire
